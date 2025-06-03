@@ -16,6 +16,9 @@ fi
 # If it matches, allow the commit
 exit 0
 
-#script done
-#
-#
+# mkdir -p .githooks
+# git config core.hooksPath .githooks ; chmod +x .githooks/commit-msg
+# cd .githooks
+# vi commit-msg
+# git config --get core.hooksPath // validate
+
