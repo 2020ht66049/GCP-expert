@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Get the commit message file
+commit_msg_file=$1
+
+# Read the first line of the commit message
+commit_msg=$(head -n1 "$commit_msg_file")
+
+# Check if it starts with something like ABC-123:
+if ! echo "$commit_msg" | grep -qE '^PROJ-[0-9]+:'; then
+  echo "❌ Commit message must start with PROJ-<number>:"
+  echo "Example: PROJ-123: Add login feature"
+  exit 1
+fi
+
+# If it matches, allow the commit
+exit 0
