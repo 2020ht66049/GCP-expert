@@ -15,3 +15,5 @@ fi
 
 # If it matches, allow the commit
 exit 0
+
+#script done
